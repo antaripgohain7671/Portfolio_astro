@@ -1,0 +1,33 @@
+---
+// Component Imports
+import Layout from "../layouts/layout.astro";
+import Meta from "../components/seotags.astro";
+//UI Imports
+// import "../styles/landing.css";
+//Config Imports
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+
+const {
+  image,
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  ogType,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-testid="html">
+  <head>
+    <Meta
+      title={SITE_TITLE}
+      description={SITE_DESCRIPTION}
+      ,
+      ogType={ogType}
+      ;
+    />
+  </head>
+  <body>
+    <Layout/>
+  </body>
+</html>

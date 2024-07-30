@@ -1,0 +1,25 @@
+---
+import Sidebar from "../components/sidebar.astro";
+import Home from "../components/home.astro";
+import Contact from "../components/contact.astro";
+---
+
+<div class="sidebar-container">
+  <Sidebar />
+  <main class="main-content">
+    <Home/>
+    <Contact/>
+  </main>
+</div>
+
+<style>
+  .sidebar-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .main-content{
+    display:grid;
+    grid-template-rows: auto 4fr;
+  }
+</style>
+            
